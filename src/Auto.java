@@ -47,6 +47,7 @@ public class Auto {
 
     public void geefGas() {
         snelheid += 20;
+        kilometerStand += snelheid;
         System.out.print("\nde " + merk + " rijdt met " + snelheid + " kilometer/uur.\n");
     }
 
@@ -59,7 +60,6 @@ public class Auto {
     }
 
     public int getKilometerStand() {
-        kilometerStand += snelheid;
         System.out.print("\nde kilometerstand van de " + merk + " is: " + kilometerStand + " kilometer.\n");
         return kilometerStand;
     }
