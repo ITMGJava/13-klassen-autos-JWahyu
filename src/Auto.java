@@ -1,6 +1,6 @@
 public class Auto {
     public String merk = "Toyota";
-    public int kilometerStand = 23000;
+    public int kilometerStand = 50000;
     public int snelheid = 0;
 
     public static void main(String[] args) {
@@ -26,15 +26,15 @@ public class Auto {
         System.out.print("\n―――――――――――――――――――――――――\n");
 
         Auto auto3 = new Auto();
-        auto2.setMerk("Volvo");
-        auto2.setKilometerStand(10000);
+        auto3.setMerk("Volvo");
+        auto3.setKilometerStand(10000);
 
-        auto2.start();
-        auto2.geefGas();
-        auto2.geefGas();
-        auto2.geefGas();
-        auto2.stop();
-        auto2.getKilometerStand();
+        auto3.start();
+        auto3.geefGas();
+        auto3.geefGas();
+        auto3.geefGas();
+        auto3.stop();
+        auto3.getKilometerStand();
 
     }
 
@@ -49,7 +49,6 @@ public class Auto {
 
     public void geefGas() {
         snelheid += 20;
-        kilometerStand += snelheid;
         System.out.print("\nde " + merk + " rijdt met " + snelheid + " kilometer/uur.\n");
     }
 
@@ -62,6 +61,7 @@ public class Auto {
     }
 
     public int getKilometerStand() {
+        kilometerStand += snelheid;
         System.out.print("\nde kilometerstand van de " + merk + " is: " + kilometerStand + " kilometer.\n");
         return kilometerStand;
     }
