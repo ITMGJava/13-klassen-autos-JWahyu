@@ -1,7 +1,7 @@
 public class Auto {
-    public String merk = "Toyota";
-    public int kilometerStand = 23000;
-    public int snelheid = 0;
+    String merk = "Toyota";
+    int kilometerStand = 23000;
+    int snelheid = 0;
 
     public static void main(String[] args) {
         Auto auto1 = new Auto();
@@ -9,7 +9,7 @@ public class Auto {
         auto1.start();
         auto1.geefGas();
         auto1.stop();
-        auto1.getKilometerStand();
+        System.out.print("\nde kilometerstand van de " + auto1.merk + " is: " + auto1.kilometerStand + " kilometer.\n");
 
         System.out.print("\n―――――――――――――――――――――――――\n");
 
@@ -19,7 +19,7 @@ public class Auto {
         auto2.start();
         auto2.geefGas();
         auto2.stop();
-        auto2.getKilometerStand();
+        System.out.print("\nde kilometerstand van de " + auto2.merk + " is: " + auto2.kilometerStand + " kilometer.\n");
 
         System.out.print("\n―――――――――――――――――――――――――\n");
 
@@ -32,22 +32,21 @@ public class Auto {
         auto3.geefGas();
         auto3.geefGas();
         auto3.stop();
-        auto3.getKilometerStand();
+        System.out.print("\nde kilometerstand van de " + auto3.merk + " is: " + auto3.kilometerStand + " kilometer.\n");
 
     }
 
-    public String getMerk() {
-        return merk;
-    }
+//    public String getMerk() {
+//        return merk;
+//    }
 
-    public String setMerk(String merk) {
+    public void setMerk(String merk) {
         this.merk = merk;
-        return merk;
     }
 
     public void geefGas() {
         snelheid += 20;
-        kilometerStand += snelheid;
+        kilometerStand += 20;
         System.out.print("\nde " + merk + " rijdt met " + snelheid + " kilometer/uur.\n");
     }
 
@@ -59,13 +58,11 @@ public class Auto {
         System.out.print("\nde " + merk + " start.\n");
     }
 
-    public int getKilometerStand() {
-        System.out.print("\nde kilometerstand van de " + merk + " is: " + kilometerStand + " kilometer.\n");
-        return kilometerStand;
-    }
+//    public int getKilometerStand() {
+//        return kilometerStand;
+//    }
 
-    public int setKilometerStand(int kilometerStand) {
+    public void setKilometerStand(int kilometerStand) {
         this.kilometerStand = kilometerStand;
-        return kilometerStand;
     }
 }
