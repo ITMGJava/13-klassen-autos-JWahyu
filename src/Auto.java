@@ -1,12 +1,10 @@
 public class Auto {
     public String merk = "Toyota";
-    public int kilometerStand = 50000;
+    public int kilometerStand = 23000;
     public int snelheid = 0;
 
     public static void main(String[] args) {
         Auto auto1 = new Auto();
-        auto1.setMerk("Toyota");
-        auto1.setKilometerStand(50000);
 
         auto1.start();
         auto1.geefGas();
